@@ -4,7 +4,7 @@ using Xunit;
 
 namespace FizzBuzz.Test
 {
-    public class FizzBuzzGeneratorTest
+    public class FizzBuzzGeneratorTests
     {
         [Fact]
         public void Returns_numbers_when_not_divided_by_3_or_5()

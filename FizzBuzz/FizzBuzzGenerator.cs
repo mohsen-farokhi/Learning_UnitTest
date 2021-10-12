@@ -2,7 +2,6 @@
 
 namespace FizzBuzz
 {
-
     public class FizzBuzzGenerator
     {
         public static IList<string> Generate(int start, int end)
