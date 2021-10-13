@@ -1,3 +1,4 @@
+using FluentAssertions;
 using TestDoubleSample.Test.Testdoubles;
 using Xunit;
 
@@ -20,7 +21,7 @@ namespace TestDoubleSample.Test
 
             var salaryWithoutTaxes = service.CalculateSalary(salary);
 
-            Assert.Equal(expected, salaryWithoutTaxes);
+            salaryWithoutTaxes.Should().Be(expected);
         }
     }
 }
