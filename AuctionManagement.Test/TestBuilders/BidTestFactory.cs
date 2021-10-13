@@ -1,7 +1,7 @@
 ﻿using AuctionManagement;
-using static AuctionManagementTest.TestBuilders.TestConstants;
+using static AuctionManagement.Test.TestBuilders.TestConstants;
 
-namespace AuctionManagementTest.TestBuilders
+namespace AuctionManagement.Test.TestBuilders
 {
     internal class BidTestFactory
     {

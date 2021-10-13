@@ -11,15 +11,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.FizzBuzzSample", "01.Fiz
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.XmlNinjaSample", "02.XmlNinjaSample", "{7D3278E0-7570-41E7-8837-3AF1E551BD85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlNinja", "XmlNinja\XmlNinja.csproj", "{AA4EF263-D8E5-44A0-BDFC-1E38B80324DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlNinja", "XmlNinja\XmlNinja.csproj", "{AA4EF263-D8E5-44A0-BDFC-1E38B80324DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlNinja.Test", "XmlNinja.Test\XmlNinja.Test.csproj", "{6E795EF7-0078-45EC-B51D-FB1E5092FD2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlNinja.Test", "XmlNinja.Test\XmlNinja.Test.csproj", "{6E795EF7-0078-45EC-B51D-FB1E5092FD2D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.AuctionManagementSample", "03.AuctionManagementSample", "{CA0DBDD3-0A5F-4ABD-96F2-52138E5AB006}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuctionManagement", "AuctionManagement\AuctionManagement.csproj", "{832C35F2-49F2-447F-B47F-BE50B60E4DCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuctionManagement", "AuctionManagement\AuctionManagement.csproj", "{832C35F2-49F2-447F-B47F-BE50B60E4DCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuctionManagementTest", "AuctionManagementTest\AuctionManagementTest.csproj", "{6DC06E1B-72A6-406F-B887-C39BEB0B331F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuctionManagement.Test", "AuctionManagement.Test\AuctionManagement.Test.csproj", "{18DED3A2-0CA5-4683-99E1-6C7593708097}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +47,10 @@ Global
 		{832C35F2-49F2-447F-B47F-BE50B60E4DCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{832C35F2-49F2-447F-B47F-BE50B60E4DCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{832C35F2-49F2-447F-B47F-BE50B60E4DCF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6DC06E1B-72A6-406F-B887-C39BEB0B331F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6DC06E1B-72A6-406F-B887-C39BEB0B331F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6DC06E1B-72A6-406F-B887-C39BEB0B331F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6DC06E1B-72A6-406F-B887-C39BEB0B331F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18DED3A2-0CA5-4683-99E1-6C7593708097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18DED3A2-0CA5-4683-99E1-6C7593708097}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18DED3A2-0CA5-4683-99E1-6C7593708097}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18DED3A2-0CA5-4683-99E1-6C7593708097}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,7 +61,7 @@ Global
 		{AA4EF263-D8E5-44A0-BDFC-1E38B80324DA} = {7D3278E0-7570-41E7-8837-3AF1E551BD85}
 		{6E795EF7-0078-45EC-B51D-FB1E5092FD2D} = {7D3278E0-7570-41E7-8837-3AF1E551BD85}
 		{832C35F2-49F2-447F-B47F-BE50B60E4DCF} = {CA0DBDD3-0A5F-4ABD-96F2-52138E5AB006}
-		{6DC06E1B-72A6-406F-B887-C39BEB0B331F} = {CA0DBDD3-0A5F-4ABD-96F2-52138E5AB006}
+		{18DED3A2-0CA5-4683-99E1-6C7593708097} = {CA0DBDD3-0A5F-4ABD-96F2-52138E5AB006}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6675DF90-9FDF-460A-B8A1-B3DC80B0F33F}

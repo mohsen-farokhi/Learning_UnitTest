@@ -1,4 +1,4 @@
-﻿namespace AuctionManagementTest.TestBuilders
+﻿namespace AuctionManagement.Test.TestBuilders
 {
     internal class TestConstants
     {

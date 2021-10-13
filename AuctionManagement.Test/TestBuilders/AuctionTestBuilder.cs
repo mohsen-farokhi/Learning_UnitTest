@@ -1,8 +1,7 @@
-﻿using AuctionManagement;
-using System;
-using static AuctionManagementTest.TestConstants;
+﻿using System;
+using static AuctionManagement.Test.TestBuilders.TestConstants;
 
-namespace AuctionManagementTest.TestBuilders
+namespace AuctionManagement.Test.TestBuilders
 {
     internal class AuctionTestBuilder
     {

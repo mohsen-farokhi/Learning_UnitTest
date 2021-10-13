@@ -1,11 +1,10 @@
-using AuctionManagement;
-using AuctionManagementTest.TestBuilders;
+using AuctionManagement.Test.TestBuilders;
 using FluentAssertions;
 using System;
 using Xunit;
-using static AuctionManagementTest.TestBuilders.TestConstants;
+using static AuctionManagement.Test.TestBuilders.TestConstants;
 
-namespace AuctionManagementTest
+namespace AuctionManagement.Test
 {
     public class UnitTest1
     {
