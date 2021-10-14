@@ -1,10 +1,10 @@
-﻿using FluentAssertions;
-using Moq;
+using FluentAssertions;
+using TestDoubleSample.Test.Testdoubles;
 using Xunit;
 
 namespace TestDoubleSample.Test
 {
-    public class TaxCalculatorText
+    public class TaxCalculatorText_HandMade
     {
         [Theory]
         [InlineData(1000000, 9, 910000)]
@@ -13,12 +13,11 @@ namespace TestDoubleSample.Test
         public void Tax_is_subtracted_from_salary
             (long salary, double taxRate, double expected)
         {
-            var mockRepository = new Mock<ITaxRepository>();
+            var repository = StubTaxRepository
+                .CreateNewStub()
+                .WhichReturnsTaxRateAs(taxRate);
 
-            mockRepository.Setup(c => c.GetCurrentTaxRate())
-                .Returns(taxRate);
-
-            var service = new TaxService(mockRepository.Object);
+            var service = new TaxService(repository);
 
             var salaryWithoutTaxes = service.CalculateSalary(salary);
 

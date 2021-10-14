@@ -1,5 +1,5 @@
 ﻿using FluentAssertions;
-using TestDoubleSample.Test.Testdoubles;
+using Moq;
 using Xunit;
 
 namespace TestDoubleSample.Test
@@ -9,19 +9,20 @@ namespace TestDoubleSample.Test
         [Fact]
         public void save_employee_on_registration()
         {
-            var mockRepository = new HandMockEmployeeRepository();
+            var mockRepository = new Mock<IEmployeeRepository>();
 
-            var service = new EmployeeService(mockRepository);
+            var service = new EmployeeService(mockRepository.Object);
 
             var expected = new Employee { FirstName = "John", LastName = "Doe" };
 
             service.RegisterEmployee("John", "Doe");
 
-            mockRepository.GetCalled(nameof(IEmployeeRepository.Create))
-                .CalledTimes.Should().Be(1);
+            //mockRepository.Verify(c => c.Create(It.IsAny<Employee>()), Times.Once);
 
-            mockRepository.GetCalled(nameof(IEmployeeRepository.Create))
-                .PassedArgument.Should().BeEquivalentTo(expectation: expected);
+            mockRepository.Verify
+                (c => c.Create(It.Is<Employee>
+                    (c => c.FirstName == "John" && c.LastName == "Doe")),
+                Times.Once);
         }
     }
 }
