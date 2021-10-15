@@ -53,9 +53,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UOM.Application.Test.Integration", "UOM.Application.Test.Integration\UOM.Application.Test.Integration.csproj", "{DF396596-6598-45CE-8D70-48A239A4C331}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gayeways", "Gayeways", "{8C90BF6A-F0E2-4969-BBC4-99173B9CE105}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateways", "Gateways", "{8C90BF6A-F0E2-4969-BBC4-99173B9CE105}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UOM.RestApi", "UOM.RestApi\UOM.RestApi.csproj", "{A041844A-4700-4DB7-AAF5-7AC9D4AAA97B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UOM.RestApi", "UOM.RestApi\UOM.RestApi.csproj", "{A041844A-4700-4DB7-AAF5-7AC9D4AAA97B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

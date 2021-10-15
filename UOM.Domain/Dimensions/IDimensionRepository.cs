@@ -2,7 +2,7 @@
 {
     public interface IDimensionRepository
     {
-        int NextId();
+        long NextId();
         void Add(Dimension dimension);
         Dimension GetById(long id);
     }

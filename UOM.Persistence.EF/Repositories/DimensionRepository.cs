@@ -23,7 +23,7 @@ namespace UOM.Persistence.EF.Repositories
             return _uomContext.Dimensions.Find(id);
         }
 
-        public int NextId()
+        public long NextId()
         {
             return 1;// new Random().Next(1, 9999);
         }

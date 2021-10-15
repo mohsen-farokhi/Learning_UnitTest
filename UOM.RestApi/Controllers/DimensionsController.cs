@@ -15,10 +15,10 @@ namespace UOM.RestApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(DefineDimensionDto dto)
+        public long Post(DefineDimensionDto dto)
         {
-            _dimensionService.DefineDimension(dto);
-            return Ok();
+            var id = _dimensionService.DefineDimension(dto);
+            return id;
         }
 
         [HttpGet("{id}")]

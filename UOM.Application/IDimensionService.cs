@@ -4,7 +4,7 @@ namespace UOM.Application
 {
     public interface IDimensionService
     {
-        void DefineDimension(DefineDimensionDto dto);
+        long DefineDimension(DefineDimensionDto dto);
 
         IList<DimensionDto> GetAllDimensions();
 

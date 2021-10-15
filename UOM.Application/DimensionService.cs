@@ -13,7 +13,7 @@ namespace UOM.Application
             _repository = repository;
         }
 
-        public void DefineDimension(DefineDimensionDto dto)
+        public long DefineDimension(DefineDimensionDto dto)
         {
             var id = _repository.NextId();
 
@@ -21,6 +21,8 @@ namespace UOM.Application
                 new Dimension(id, dto.Name, dto.Symbol);
 
             _repository.Add(dimension);
+
+            return id;
         }
 
         public IList<DimensionDto> GetAllDimensions()
