@@ -1,6 +1,6 @@
 using FluentAssertions;
-using System;
 using UOM.Domain.Test.Unit.TestUtils;
+using UOM.Domain.UniOfMeasures;
 using Xunit;
 
 namespace UOM.Domain.Test.Unit

@@ -1,4 +1,5 @@
 ﻿using FluentAssertions;
+using UOM.Domain.Dimensions;
 using Xunit;
 
 namespace UOM.Domain.Test.Unit
@@ -8,7 +9,7 @@ namespace UOM.Domain.Test.Unit
         [Fact]
         public void measurement_constructed_properly()
         {
-            var dimension =
+            var dimension = 
                 new Dimension(id: 1, name: "Mass", symbol: "m");
 
             dimension.Id.Should().Be(1);

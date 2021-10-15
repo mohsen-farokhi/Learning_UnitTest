@@ -1,4 +1,6 @@
-﻿namespace UOM.Domain
+﻿using UOM.Domain.Dimensions;
+
+namespace UOM.Domain.UniOfMeasures
 {
     public class BaseUniOfMeasure
     {

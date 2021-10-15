@@ -1,4 +1,6 @@
-﻿namespace UOM.Domain.Test.Unit.TestUtils
+﻿using UOM.Domain.Dimensions;
+
+namespace UOM.Domain.Test.Unit.TestUtils
 {
     internal class DimensionFactory
     {

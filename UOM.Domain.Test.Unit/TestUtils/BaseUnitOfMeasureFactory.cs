@@ -1,4 +1,6 @@
-﻿namespace UOM.Domain.Test.Unit.TestUtils
+﻿using UOM.Domain.UniOfMeasures;
+
+namespace UOM.Domain.Test.Unit.TestUtils
 {
     public class BaseUnitOfMeasureFactory
     {
@@ -7,7 +9,8 @@
             var mass = DimensionFactory.CreateMassDimension();
 
             var gram = 
-                new BaseUniOfMeasure(id: 1, name: "Gram", symbol: "gr", dimension: mass);
+                new BaseUniOfMeasure
+                (id: 1, name: "Gram", symbol: "gr", dimension: mass);
 
             return gram;
         }

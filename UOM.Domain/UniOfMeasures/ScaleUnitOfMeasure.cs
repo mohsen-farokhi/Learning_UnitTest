@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace UOM.Domain
+﻿namespace UOM.Domain.UniOfMeasures
 {
     public class ScaleUnitOfMeasure
     {
