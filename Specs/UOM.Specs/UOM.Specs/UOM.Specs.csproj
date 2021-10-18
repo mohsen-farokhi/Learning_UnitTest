@@ -22,6 +22,26 @@
     
     <PackageReference Include="FluentAssertions" Version="5.10.3" />
     
+
+    
+
+    
+
+    
+
+    
+    <PackageReference Include="Suzianna.Core" Version="1.1.0" />
+    
+
+    
+
+    
+
+    
+
+    
+    <PackageReference Include="Suzianna.Rest" Version="1.1.0" />
+    
   </ItemGroup>
 
   <ItemGroup>
