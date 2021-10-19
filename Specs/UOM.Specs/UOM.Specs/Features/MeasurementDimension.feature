@@ -3,7 +3,7 @@
 	As a procurement manager
 	I want to be able to define measurement dimension
 
-@mytag
+@API-Level
 Scenario: Defining dimension
 	Given i have entered as procurement manager account
 	When i define the following dimension

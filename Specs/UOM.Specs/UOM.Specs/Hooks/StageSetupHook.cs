@@ -17,7 +17,7 @@ namespace UOM.Specs.Hooks
             _container = container;
         }
 
-        [BeforeScenario]
+        [BeforeScenario(tags: "API-Level")]
         public void SetupStage()
         {
             var cast = Cast.WhereEveryoneCan(new List<IAbility>()
@@ -26,7 +26,7 @@ namespace UOM.Specs.Hooks
             });
 
             var stage = new Stage(cast);
-            _container.RegisterInstanceAs(stage); 
+            _container.RegisterInstanceAs(stage);
         }
     }
 }
