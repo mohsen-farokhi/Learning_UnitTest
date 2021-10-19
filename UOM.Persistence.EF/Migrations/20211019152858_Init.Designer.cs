@@ -9,7 +9,7 @@ using UOM.Persistence.EF;
 namespace UOM.Persistence.EF.Migrations
 {
     [DbContext(typeof(UomContext))]
-    [Migration("20211014150630_Init")]
+    [Migration("20211019152858_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,7 +23,9 @@ namespace UOM.Persistence.EF.Migrations
             modelBuilder.Entity("UOM.Domain.Dimensions.Dimension", b =>
                 {
                     b.Property<long>("Id")
-                        .HasColumnType("bigint");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");

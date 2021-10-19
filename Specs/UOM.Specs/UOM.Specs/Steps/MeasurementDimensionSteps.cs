@@ -1,37 +1,53 @@
 ﻿using FluentAssertions;
-using RestSharp;
 using Suzianna.Core.Screenplay.Actors;
 using Suzianna.Rest.Screenplay.Abilities;
-using System;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 using UOM.Specs.Models;
+using UOM.Specs.Screenplay.Tasks;
+using UOM.Specs.Screenplay.Questions;
+using UOM.Specs.Constants;
+using Suzianna.Core.Screenplay;
+using System.Collections.Generic;
 
 namespace UOM.Specs.Steps
 {
     [Binding]
     public class MeasurementDimensionSteps
     {
+        private MeasurementDimension _dimension;
+        private Stage _stage;
 
-
-        private Actor _actor;
+        public MeasurementDimensionSteps(Stage stage)
+        {
+            _stage = stage;
+        }
 
         [Given(@"i have entered as procurement manager account")]
         public void GivenIHaveEnteredAsProcurementManagerAccount()
         {
-            _actor = Actor.Named("ProcurementManager").WhoCan(CallAnApi.At("http://localhost:5000"));
-
-
+            _stage.ShineSpotlightOn("Procurement Manager");
         }
 
         [When(@"i define the following dimension")]
         public void WhenIDefineTheFollowingDimension(Table table)
         {
-            var dimension = table.CreateInstance<MeasurementDimension>();
+            _dimension = table.CreateInstance<MeasurementDimension>();
 
-
+            _stage.ActorInTheSpotlight.AttemptsTo
+                (Define.Dimension(_dimension));
         }
 
+        [Then(@"i should be able to see dimension in the list of dimension")]
+        public void ThenIShouldBeAbleToSeeDimensionInTheListOfDimension()
+        {
+            var actualDimension = 
+                _stage.ActorInTheSpotlight.AsksFor(new LastCreatedDimension());
+
+            actualDimension.Should().BeEquivalentTo(_dimension);
+        }
+
+        #region OldCode
         //private long _createdId;
 
         //private readonly RestClient _client =
@@ -71,5 +87,6 @@ namespace UOM.Specs.Steps
 
         //    actualDimension.Should().BeEquivalentTo(_expectedDimension);
         //}
+        #endregion
     }
 }

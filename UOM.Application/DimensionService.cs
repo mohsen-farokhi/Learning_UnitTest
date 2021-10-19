@@ -15,12 +15,10 @@ namespace UOM.Application
 
         public long DefineDimension(DefineDimensionDto dto)
         {
-            var id = _repository.NextId();
-
             var dimension =
-                new Dimension(id, dto.Name, dto.Symbol);
+                new Dimension(dto.Name, dto.Symbol);
 
-            _repository.Add(dimension);
+            var id = _repository.Add(dimension);
 
             return id;
         }

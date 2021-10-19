@@ -12,10 +12,12 @@ namespace UOM.Persistence.EF.Repositories
             _uomContext = uomContext;
         }
 
-        public void Add(Dimension dimension)
+        public long Add(Dimension dimension)
         {
             _uomContext.Add(dimension);
             _uomContext.SaveChanges();
+
+            return dimension.Id;
         }
 
         public Dimension GetById(long id)
@@ -23,9 +25,5 @@ namespace UOM.Persistence.EF.Repositories
             return _uomContext.Dimensions.Find(id);
         }
 
-        public long NextId()
-        {
-            return 1;// new Random().Next(1, 9999);
-        }
     }
 }

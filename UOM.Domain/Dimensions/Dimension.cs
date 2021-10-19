@@ -3,9 +3,8 @@
     public class Dimension
     {
         public Dimension
-            (long id, string name, string symbol)
+            (string name, string symbol)
         {
-            Id = id;
             Name = name;
             Symbol = symbol;
         }

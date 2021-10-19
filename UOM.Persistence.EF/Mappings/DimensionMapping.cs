@@ -10,7 +10,7 @@ namespace UOM.Persistence.EF.Mappings
         {
             builder.HasKey(p => p.Id);
 
-            builder.Property(p => p.Id).ValueGeneratedNever();
+            builder.Property(p => p.Id).ValueGeneratedOnAdd();
         }
     }
 }

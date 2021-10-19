@@ -10,9 +10,8 @@ namespace UOM.Domain.Test.Unit
         public void measurement_constructed_properly()
         {
             var dimension = 
-                new Dimension(id: 1, name: "Mass", symbol: "m");
+                new Dimension(name: "Mass", symbol: "m");
 
-            dimension.Id.Should().Be(1);
             dimension.Name.Should().Be("Mass");
             dimension.Symbol.Should().Be("m");
         }

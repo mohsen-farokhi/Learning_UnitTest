@@ -15,9 +15,9 @@ namespace UOM.Application.Test.Integration
             var repository = new DimensionRepository(DbContext);
             var service = new DimensionService(repository);
 
-            var expected = new Dimension(1, "Mass", "m");
+            var expected = new Dimension("Mass", "m");
 
-            service.DefineDimension(new DefineDimensionDto
+            var id = service.DefineDimension(new DefineDimensionDto
             {
                 Name = "Mass",
                 Symbol = "m",
@@ -25,9 +25,9 @@ namespace UOM.Application.Test.Integration
 
             this.DetachAllEntities();
 
-            var actual = repository.GetById(1);
+            var actual = repository.GetById(id);
 
-            actual.Should().BeEquivalentTo(expected);
+            actual.Should().BeEquivalentTo(expected, c => c.Excluding(e => e.Id));
         }
     }
 }
