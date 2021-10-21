@@ -75,14 +75,14 @@ namespace UOM.Specs.Features
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Defining dimension", new string[] {
-                "mytag"}, SourceLine=6)]
+                "UI-Level"}, SourceLine=7)]
         public virtual void DefiningDimension()
         {
             string[] tagsOfScenario = new string[] {
-                    "mytag"};
+                    "UI-Level"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Defining dimension", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 7
+#line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -102,7 +102,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 8
+#line 9
  testRunner.Given("i have entered as procurement manager account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
@@ -111,10 +111,10 @@ this.ScenarioInitialize(scenarioInfo);
                 table1.AddRow(new string[] {
                             "Mass",
                             "m"});
-#line 9
+#line 10
  testRunner.When("i define the following dimension", ((string)(null)), table1, "When ");
 #line hidden
-#line 12
+#line 13
  testRunner.Then("i should be able to see dimension in the list of dimension", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

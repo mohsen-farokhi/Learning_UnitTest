@@ -1,14 +1,8 @@
-﻿using FluentAssertions;
-using Suzianna.Core.Screenplay.Actors;
-using Suzianna.Rest.Screenplay.Abilities;
-using TechTalk.SpecFlow;
+﻿using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
-using UOM.Specs.Models;
 using UOM.Specs.Screenplay.Tasks;
-using UOM.Specs.Screenplay.Questions;
-using UOM.Specs.Constants;
 using Suzianna.Core.Screenplay;
-using System.Collections.Generic;
+using UOM.Specs.Shared.Models;
 
 namespace UOM.Specs.Steps
 {
@@ -41,10 +35,7 @@ namespace UOM.Specs.Steps
         [Then(@"i should be able to see dimension in the list of dimension")]
         public void ThenIShouldBeAbleToSeeDimensionInTheListOfDimension()
         {
-            var actualDimension = 
-                _stage.ActorInTheSpotlight.AsksFor(new LastCreatedDimension());
-
-            actualDimension.Should().BeEquivalentTo(_dimension);
+            
         }
 
         #region OldCode

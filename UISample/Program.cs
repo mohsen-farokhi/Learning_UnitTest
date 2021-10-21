@@ -20,8 +20,6 @@ namespace UISample
             {
                 driver.Navigate().GoToUrl("http://www.tsetmc.com/Loader.aspx?ParTree=151311&i=45507655586782998");
 
-                var test = driver.FindElement(By.Id("ThemePlace")).GetAttribute("innerHTML");
-
                 IJavaScriptExecutor js = driver as IJavaScriptExecutor;
                 js.ExecuteScript("ii.ShowTab(7)");
 
