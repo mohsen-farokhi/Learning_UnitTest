@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
 using System;
 
 namespace UISample
@@ -23,7 +24,8 @@ namespace UISample
                 IJavaScriptExecutor js = driver as IJavaScriptExecutor;
                 js.ExecuteScript("ii.ShowTab(7)");
 
-                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+                var wait = new WebDriverWait(driver, timeout: TimeSpan.FromSeconds(60));
+                wait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(By.Id("ShareholderContent")));
 
                 var element = driver.FindElement(By.ClassName("ArrowUp"));
 

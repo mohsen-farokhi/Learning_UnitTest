@@ -2,6 +2,8 @@
 using UOM.Specs.Shared.Models;
 using UOM.Specs.Shared.Tasks;
 using UOM.Technical.WebUI.Framework.Interaction;
+using UOM.Technical.WebUI.Kendo;
+using UOM.Technical.WebUI.Questions;
 
 namespace UOM.Specs.Screenplay.Tasks
 {
@@ -18,8 +20,11 @@ namespace UOM.Specs.Screenplay.Tasks
                 new Click(By.Id("addDimensionBtn")),
                 new FillInput(By.Id("name"), Dimension.Name),
                 new FillInput(By.Id("symbol"), Dimension.Symbol),
-                new Click(By.Id("saveButton")));
+                new Click(By.Id("saveButton")),
+                new WaiatForKendoGrid());
 
+            var dataInGrid = actor.AsksFor(new DataInKendoGrid<MeasurementDimension>());
+            // find created id from grid data
             return 0;
         }
     }
