@@ -11,7 +11,7 @@ namespace AuctionManagement.Test.TestBuilders
         private DateTime _endDateTime = DateTime.Now.AddDays(1);
         private string _product = "ASUS N56";
         private long _startingPrice = 1000;
-        private IClock _clock = new StubClock();
+        private IClock _clock = StubClock.WhichSetsNowAs(DateTime.Now);
 
         public Auction Build()
         {

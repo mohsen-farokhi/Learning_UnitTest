@@ -78,7 +78,7 @@ namespace AuctionManagement.Test
 
             var bid = BidTestFactory.CreateWithAmount(amount: 1100);
 
-            auction.PlaceBid(bid, new StubClock());
+            auction.PlaceBid(bid, StubClock.WhichSetsNowAs(DateTime.Now));
 
             auction.WinningBid.Should().Be(bid);
         }
@@ -97,7 +97,7 @@ namespace AuctionManagement.Test
             var bid = BidTestFactory.CreateWithAmount(amount: bidAmount);
 
             Action placingBid = () =>
-                auction.PlaceBid(bid, new StubClock());
+                auction.PlaceBid(bid, StubClock.WhichSetsNowAs(DateTime.Now));
 
             placingBid.Should().Throw<InvalidBidAmountException>();
 
@@ -114,7 +114,7 @@ namespace AuctionManagement.Test
             var bid = BidTestFactory.CreateWithBidder(bidderId: Sellers.Jack);
 
             Action placeBid = () =>
-                auction.PlaceBid(bid, new StubClock());
+                auction.PlaceBid(bid, StubClock.WhichSetsNowAs(DateTime.Now));
 
             placeBid.Should().Throw<InvalidBidderException>();
         }
