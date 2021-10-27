@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AuctionManagement.Frameworks;
+using System;
 
 namespace AuctionManagement
 {
@@ -8,9 +9,10 @@ namespace AuctionManagement
             (int sellerId,
             DateTime endDateTime,
             string product,
-            long startingPrice)
+            long startingPrice,
+            IClock clock)
         {
-            if (endDateTime < DateTime.Now)
+            if (endDateTime < clock.Now())
             {
                 throw new InvalidEndDateException();
             }
@@ -27,7 +29,7 @@ namespace AuctionManagement
         public long StartingPrice { get; set; }
         public Bid WinningBid { get; set; }
 
-        public void PlaceBid(Bid bid)
+        public void PlaceBid(Bid bid, IClock clock)
         {
             if (bid.BidderId == SellerId)
             {
@@ -37,6 +39,11 @@ namespace AuctionManagement
             if (bid.Amount <= StartingPrice)
             {
                 throw new InvalidBidAmountException();
+            }
+
+            if(clock.Now() >= EndDateTime)
+            {
+                throw new ExpiredAuctionException();
             }
 
             WinningBid = bid;

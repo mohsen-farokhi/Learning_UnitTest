@@ -63,7 +63,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UISample", "UISample\UISamp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "07.ValueTransformation", "07.ValueTransformation", "{0476CF5B-6F6D-4A57-A68F-CA27B0C7BD2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueTransformation", "ValueTransformation\ValueTransformation.csproj", "{624B827C-9D10-4218-BB18-99014BEE63E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValueTransformation", "ValueTransformation\ValueTransformation.csproj", "{624B827C-9D10-4218-BB18-99014BEE63E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
