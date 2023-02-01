@@ -5,12 +5,8 @@ namespace AuctionManagement
 {
     public class Auction
     {
-        public Auction
-            (int sellerId,
-            DateTime endDateTime,
-            string product,
-            long startingPrice,
-            IClock clock)
+        public Auction(int sellerId, DateTime endDateTime,
+            string product, long startingPrice, IClock clock)
         {
             if (endDateTime < clock.Now())
             {
@@ -41,7 +37,7 @@ namespace AuctionManagement
                 throw new InvalidBidAmountException();
             }
 
-            if(clock.Now() >= EndDateTime)
+            if (clock.Now() >= EndDateTime)
             {
                 throw new ExpiredAuctionException();
             }

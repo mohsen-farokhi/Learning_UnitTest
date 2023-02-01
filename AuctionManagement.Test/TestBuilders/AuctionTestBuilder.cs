@@ -15,8 +15,7 @@ namespace AuctionManagement.Test.TestBuilders
 
         public Auction Build()
         {
-            return
-                 new Auction
+            return new Auction
                  (_sellerId, _endDateTime, _product, _startingPrice, _clock);
         }
 

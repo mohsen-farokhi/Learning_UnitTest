@@ -16,7 +16,7 @@ namespace XmlNinja
 
             var nameOfClass = target.GetType().Name;
 
-            xmlBuiler.Append(openTagFor(nameOfClass));
+            xmlBuiler.Append(OpenTagFor(nameOfClass));
 
             var properties = target.GetType().GetProperties();
             foreach (var propertyInfo in properties)
@@ -24,25 +24,25 @@ namespace XmlNinja
                 var nameOfProperty = propertyInfo.Name;
                 var value = propertyInfo.GetValue(target);
 
-                xmlBuiler.Append(getTag(nameOfProperty, value));
+                xmlBuiler.Append(GetTag(nameOfProperty, value));
             }
 
-            xmlBuiler.Append(closeTagFor(nameOfClass));
+            xmlBuiler.Append(CloseTagFor(nameOfClass));
 
             return xmlBuiler.ToString();
         }
 
-        private static string getTag(string tag, object value)
+        private static string GetTag(string tag, object value)
         {
-            return $"{openTagFor(tag)}{value}{closeTagFor(tag)}";
+            return $"{OpenTagFor(tag)}{value}{CloseTagFor(tag)}";
         }
 
-        private static string openTagFor(string tag)
+        private static string OpenTagFor(string tag)
         {
             return $"<{tag}>";
         }
 
-        private static string closeTagFor(string tag)
+        private static string CloseTagFor(string tag)
         {
             return $"</{tag}>";
         }

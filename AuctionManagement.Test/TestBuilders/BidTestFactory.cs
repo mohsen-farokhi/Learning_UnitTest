@@ -1,5 +1,4 @@
-﻿using AuctionManagement;
-using static AuctionManagement.Test.TestBuilders.TestConstants;
+﻿using static AuctionManagement.Test.TestBuilders.TestConstants;
 
 namespace AuctionManagement.Test.TestBuilders
 {
